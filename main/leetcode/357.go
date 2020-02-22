@@ -1,9 +1,5 @@
 package main
 
-func main() {
-	countNumbersWithUniqueDigits(5)
-}
-
 func countNumbersWithUniqueDigits(n int) int {
 	if n < 0 {
 		return 10
