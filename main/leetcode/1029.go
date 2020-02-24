@@ -38,10 +38,3 @@ func twoCitySchedCost(costs [][]int) int {
 	}
 	return sum
 }
-
-func abs(i int) int {
-	if i < 0 {
-		i = -i
-	}
-	return i
-}
