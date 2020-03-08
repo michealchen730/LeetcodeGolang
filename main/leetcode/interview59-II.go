@@ -28,7 +28,6 @@ func (this *MaxQueue) Push_back(value int) {
 		i++
 	}
 }
-
 func (this *MaxQueue) Pop_front() int {
 	if len(this.queue) == 0 {
 		return -1
