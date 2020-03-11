@@ -16,7 +16,7 @@ func canThreePartsEqualSum(A []int) bool {
 				} else {
 					flag2 = true
 				}
-				if flag1 && flag2 {
+				if flag1 && flag2 && k != len(A)-1 {
 					return true
 				}
 			}
