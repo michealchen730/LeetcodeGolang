@@ -14,8 +14,8 @@ func readLinkList(head *ListNode) {
 }
 
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
-	var head = &ListNode{Val: 0}
-	res := head
+	res := &ListNode{Val: 0}
+	head := res
 	for {
 		if l1 == nil {
 			res.Next = l2
@@ -26,15 +26,15 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 			break
 		}
 		if l1 != nil && l2 != nil {
-			if l1.Val > l2.Val {
-				test := ListNode{Val: l2.Val}
-				res.Next = &test
-				l2 = l2.Next
-			} else {
-				res.Next = &ListNode{Val: l1.Val}
+			if l1.Val < l2.Val {
+				res.Next = l1
 				l1 = l1.Next
+				res = res.Next
+			} else {
+				res.Next = l2
+				l2 = l2.Next
+				res = res.Next
 			}
-			res = res.Next
 		}
 	}
 	return head.Next
