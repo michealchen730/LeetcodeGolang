@@ -1,14 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 )
-
-func main() {
-	fmt.Println(multiply("123456789", "987654321"))
-}
 
 func multiply(num1 string, num2 string) string {
 	if num1[0] == '0' || num2[0] == '0' {
