@@ -4,9 +4,6 @@ func gameOfLife(board [][]int) {
 	for i := 0; i < len(board); i++ {
 		for j := 0; j < len(board[0]); j++ {
 			temp := countCellsAlive(board, i, j)
-			if i == 0 && j == 1 {
-				fmt.Println(temp)
-			}
 			if board[i][j] == 0 {
 				if temp == 3 {
 					board[i][j] = -1
