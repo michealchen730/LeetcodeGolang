@@ -4,10 +4,6 @@ import (
 	"sort"
 )
 
-//func main()  {
-//	fmt.Println(threeSumClosest([]int{0,2,1,-3},1))
-//}
-
 func threeSumClosest(nums []int, target int) int {
 	sort.Ints(nums)
 	max := nums[0] + nums[1] + nums[2] - target
