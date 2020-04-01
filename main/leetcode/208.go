@@ -5,10 +5,10 @@ type Trie struct {
 	next   [26]*Trie
 }
 
-/** Initialize your data structure here. */
-func Constructor() Trie {
-	return Trie{}
-}
+///** Initialize your data structure here. */
+//func Constructor() Trie {
+//	return Trie{}
+//}
 
 /** Inserts a word into the trie. */
 func (this *Trie) Insert(word string) {
