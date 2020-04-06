@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func reverseOnlyLetters(S string) string {
 	bytes := []byte(S)
 	pt1, pt2 := 0, len(S)-1
@@ -19,8 +17,4 @@ func reverseOnlyLetters(S string) string {
 		}
 	}
 	return string(bytes)
-}
-
-func main() {
-	fmt.Println(reverseOnlyLetters("Test1ng-Leet=code-Q!"))
 }
