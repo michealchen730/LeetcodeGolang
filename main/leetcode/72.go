@@ -34,10 +34,3 @@ func minof3(i, j, k int) int {
 	}
 	return k
 }
-func max(i int, j int) int {
-	if i > j {
-		return i
-	} else {
-		return j
-	}
-}
