@@ -27,7 +27,6 @@ func minimumTotal(triangle [][]int) int {
 	}
 	return temp
 }
-
 func min(x int, y int) int {
 	if x > y {
 		return y
