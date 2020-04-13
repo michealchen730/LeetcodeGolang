@@ -6,9 +6,9 @@ type Solution struct {
 	src []int
 }
 
-func Constructor(nums []int) Solution {
-	return Solution{src: nums}
-}
+//func Constructor(nums []int) Solution {
+//	return Solution{src: nums}
+//}
 
 /** Resets the array to its original configuration and return it. */
 func (this *Solution) Reset() []int {

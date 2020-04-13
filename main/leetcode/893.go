@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -27,9 +26,4 @@ func numSpecialEquivGroups(A []string) int {
 		}
 	}
 	return res
-}
-
-func main() {
-	fmt.Println(numSpecialEquivGroups([]string{"abcd", "cdab", "cbad", "xyzz", "zzxy", "zzyx"}))
-
 }
