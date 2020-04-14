@@ -1,10 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"strconv"
-)
-
 func spiralMatrixIII(R int, C int, r0 int, c0 int) [][]int {
 	res := [][]int{{r0, c0}}
 	N := max(max(R-r0, r0-0+1), max(C-c0, c0-0+1))
@@ -55,22 +50,4 @@ func spiralMatrixIII(R int, C int, r0 int, c0 int) [][]int {
 		}
 	}
 	return res
-}
-
-func main() {
-	iii := spiralMatrixIII(100, 100, 82, 76)
-	fmt.Println(len(iii))
-	fmt.Println(iii)
-	mp := make(map[string]int)
-	for k, v := range iii {
-		key := strconv.Itoa(v[0]) + " " + strconv.Itoa(v[1])
-		_, ok := mp[key]
-		if !ok {
-			mp[key] = 1
-		} else {
-			fmt.Println(key)
-			fmt.Println(k)
-		}
-	}
-
 }
