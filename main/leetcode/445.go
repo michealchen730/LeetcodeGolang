@@ -1,10 +1,10 @@
 package main
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	l1 = reverseList(l1)
-	l2 = reverseList(l2)
+	l1 = reverseList2(l1)
+	l2 = reverseList2(l2)
 	temp := addTwoLinkedLists(l1, l2)
-	return reverseList(temp)
+	return reverseList2(temp)
 }
 
 //两个链表相加，使用的某大佬的代码
@@ -66,7 +66,7 @@ func addTwoLinkedLists(l1 *ListNode, l2 *ListNode) *ListNode {
 }
 
 //翻转链表，用的某位大佬的代码
-func reverseList(head *ListNode) *ListNode {
+func reverseList2(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}
