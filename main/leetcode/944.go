@@ -1,6 +1,6 @@
 package main
 
-func minDeletionSize(A []string) int {
+func minDeletionSize944(A []string) int {
 	res := 0
 	if len(A) == 1 {
 		return res
