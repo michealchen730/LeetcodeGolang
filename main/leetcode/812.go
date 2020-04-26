@@ -14,9 +14,3 @@ func largestTriangleArea(points [][]int) float64 {
 	}
 	return float64(res) / 2
 }
-func abs(i int) int {
-	if i < 0 {
-		i = -i
-	}
-	return i
-}

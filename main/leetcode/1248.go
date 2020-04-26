@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func numberOfSubarrays(nums []int, k int) int {
 	var stack []int
 	for k, v := range nums {
@@ -27,8 +25,4 @@ func numberOfSubarrays(nums []int, k int) int {
 		}
 	}
 	return res
-}
-
-func main() {
-	fmt.Println(numberOfSubarrays([]int{2, 2, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 3))
 }
