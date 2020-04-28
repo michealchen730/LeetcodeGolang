@@ -1,6 +1,7 @@
 package main
 
-func removeDuplicates(nums []int) int {
+//函数名被我更改了
+func removeDuplicates80(nums []int) int {
 	length := len(nums)
 	if length <= 2 {
 		return length
