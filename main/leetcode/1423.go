@@ -1,6 +1,6 @@
 package main
 
-func maxScore(cardPoints []int, k int) int {
+func maxScore2(cardPoints []int, k int) int {
 	var res []int
 	for i := k - 1; i >= 0; i-- {
 		res = append(res, cardPoints[i])
