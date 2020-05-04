@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func removeDuplicates(s string, k int) string {
 	bytes := []byte(s)
 	counter := make([]int, len(s))
@@ -17,8 +15,4 @@ func removeDuplicates(s string, k int) string {
 		}
 	}
 	return string(bytes)
-}
-
-func main() {
-	fmt.Println(removeDuplicates("deeedbbcccbdaa", 3))
 }
