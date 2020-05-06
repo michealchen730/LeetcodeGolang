@@ -44,10 +44,3 @@ func jump45(nums []int) int {
 	}
 	return arr[len(arr)-1]
 }
-func min(x int, y int) int {
-	if x > y {
-		return y
-	} else {
-		return x
-	}
-}
