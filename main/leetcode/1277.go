@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func countSquares(matrix [][]int) int {
 	res := 0
 	for i := 0; i < len(matrix); i++ {
@@ -39,8 +37,4 @@ func getSquares(matrix [][]int, i, j int) int {
 		}
 	}
 	return res
-}
-
-func main() {
-	fmt.Println(countSquares([][]int{[]int{0, 1, 1, 1}, []int{1, 1, 1, 1}, []int{0, 1, 1, 1}}))
 }
