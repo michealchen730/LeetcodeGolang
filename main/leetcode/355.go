@@ -15,15 +15,15 @@ type Twitter struct {
 }
 
 /** Initialize your data structure here. */
-func Constructor() Twitter {
-	return Twitter{
-		globalId:      0,
-		follower:      make(map[int][]int),
-		checkFollowed: make(map[string]bool),
-		twitter:       make(map[int][]int),
-		findTwitter:   make([]int, 0),
-	}
-}
+//func Constructor() Twitter {
+//	return Twitter{
+//		globalId:      0,
+//		follower:      make(map[int][]int),
+//		checkFollowed: make(map[string]bool),
+//		twitter:       make(map[int][]int),
+//		findTwitter:   make([]int, 0),
+//	}
+//}
 
 /** Compose a new tweet. */
 func (this *Twitter) PostTweet(userId int, tweetId int) {
