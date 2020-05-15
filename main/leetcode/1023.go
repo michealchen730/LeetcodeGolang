@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"regexp"
 	"strings"
 )
@@ -22,8 +21,4 @@ func camelMatch(queries []string, pattern string) []bool {
 		arr = append(arr, res2.MatchString(v))
 	}
 	return arr
-}
-
-func main() {
-	fmt.Println(camelMatch([]string{"aksvbjLiknuTzqono", "ksvjLimflkpnTzqn", "mmkasvjLiknTxzqn", "ksvjLiurknTzzqbn", "ksvsjLctikgnTzqn", "knzsvzjLiknTszqn"}, "ksvjLiknTzqn"))
 }
