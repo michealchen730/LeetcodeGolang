@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func longestOnes(A []int, K int) int {
 	i, j := 0, 0
 	width := 0
@@ -22,8 +20,4 @@ func longestOnes(A []int, K int) int {
 		}
 	}
 	return width
-}
-
-func main() {
-	fmt.Println(longestOnes([]int{0, 0, 0, 1}, 4))
 }
