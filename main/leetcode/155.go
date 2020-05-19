@@ -6,7 +6,7 @@ type MinStack struct {
 }
 
 /** initialize your data structure here. */
-func Constructor() MinStack {
+func Constructor155() MinStack {
 	var stack, minstack []int
 	return MinStack{
 		stack:    stack,
