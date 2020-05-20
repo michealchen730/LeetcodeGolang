@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -69,8 +68,4 @@ func reorderLogFiles(logs []string) []string {
 	sort.Sort(S937(wordlogs))
 	res := append(wordlogs, numlogs...)
 	return res
-}
-
-func main() {
-	fmt.Println(reorderLogFiles([]string{"a1 9 2 3 1", "g1 act car", "zo4 4 7", "ab1 off key dog", "a8 act zoo", "a2 act car"}))
 }
