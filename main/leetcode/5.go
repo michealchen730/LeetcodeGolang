@@ -1,6 +1,6 @@
 package main
 
-func longestPalindrome(s string) string {
+func longestPalindrome5(s string) string {
 	if len(s) == 0 {
 		return ""
 	}
