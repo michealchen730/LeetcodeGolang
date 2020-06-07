@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func productExceptSelf(nums []int) []int {
 	R := make([]int, len(nums))
 	R[len(R)-1] = 1
@@ -17,8 +15,4 @@ func productExceptSelf(nums []int) []int {
 		R[i] *= nums[i]
 	}
 	return R
-}
-
-func main() {
-	fmt.Println(productExceptSelf([]int{0, 0}))
 }
