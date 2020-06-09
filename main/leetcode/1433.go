@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -20,8 +19,4 @@ func checkIfCanBreak(s1 string, s2 string) bool {
 		}
 	}
 	return true
-}
-
-func main() {
-	fmt.Println(checkIfCanBreak("abe", "acd"))
 }
