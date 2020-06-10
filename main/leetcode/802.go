@@ -49,7 +49,3 @@ func dfs802(tmp int, graph [][]int, arr []int, path *[]int) {
 		*path = (*path)[:len(*path)-1]
 	}
 }
-
-func main() {
-	fmt.Println(eventualSafeNodes([][]int{[]int{1, 2}, []int{2, 3}, []int{5}, []int{0}, []int{5}, []int{6}, []int{}}))
-}

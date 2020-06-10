@@ -30,7 +30,6 @@ func minimumTotal(triangle [][]int) int {
 func min(x int, y int) int {
 	if x > y {
 		return y
-	} else {
-		return x
 	}
+	return x
 }

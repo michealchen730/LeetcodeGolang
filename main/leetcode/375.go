@@ -23,7 +23,6 @@ func getMoneyAmount(n int) int {
 func max(i int, j int) int {
 	if i > j {
 		return i
-	} else {
-		return j
 	}
+	return j
 }
