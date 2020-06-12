@@ -49,6 +49,3 @@ func maxSideLength(mat [][]int, threshold int) int {
 	}
 	return ans
 }
-func main() {
-	maxSideLength([][]int{[]int{1, 1, 1}, []int{1, 1, 1}, []int{1, 1, 1}}, 5)
-}
