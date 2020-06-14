@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 )
@@ -9,8 +8,6 @@ import (
 func isSubtree(s *TreeNode, t *TreeNode) bool {
 	s1 := preOrderDFS572(s)
 	s2 := preOrderDFS572(t)
-	fmt.Println(s1)
-	fmt.Println(s2)
 	return strStr(s1, s2) != -1
 }
 
@@ -41,7 +38,7 @@ func preOrderDFS572(s *TreeNode) string {
 	return ""
 }
 
-func getNext(s string) []int {
+func getNext572(s string) []int {
 	next := make([]int, len(s))
 	next[0] = -1
 	i, j := 0, -1
@@ -62,7 +59,7 @@ func strStr(haystack string, needle string) int {
 		return 0
 	}
 	i, j := 0, 0
-	next := getNext(needle)
+	next := getNext572(needle)
 	for i < len(haystack) {
 		if j == len(needle)-1 && needle[j] == haystack[i] {
 			return i - j

@@ -40,11 +40,3 @@ func reformat(s string) string {
 		return ""
 	}
 }
-
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	} else {
-		return x
-	}
-}

@@ -19,10 +19,3 @@ func getMoneyAmount(n int) int {
 	}
 	return res[1][n]
 }
-
-func max(i int, j int) int {
-	if i > j {
-		return i
-	}
-	return j
-}
