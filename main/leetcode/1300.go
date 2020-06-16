@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func findBestValue(arr []int, target int) int {
 	//先看这么一个假设，例子如下，target=15 arr=[1,2,3]，这个例子里，我们的极限也就只能是让数组保持不动
 	//那么，根据这个例子，二分查找的上限是数组中最大的那个值
@@ -39,8 +37,4 @@ func findBestValue(arr []int, target int) int {
 		}
 	}
 	return res
-}
-
-func main() {
-	fmt.Println(findBestValue([]int{1547, 83230, 57084, 93444, 70879}, 71237))
 }
