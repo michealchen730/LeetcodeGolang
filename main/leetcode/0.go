@@ -21,6 +21,16 @@ func abs(x int) int {
 	return x
 }
 
+//翻转int类型数组
+func reverseArr(arr []int) {
+	i, j := 0, len(arr)-1
+	for i < j {
+		arr[i], arr[j] = arr[j], arr[i]
+		i++
+		j--
+	}
+}
+
 //KMP算法
 func getNext(s string) []int {
 	next := make([]int, len(s))

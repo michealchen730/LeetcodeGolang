@@ -3,7 +3,7 @@ package main
 func matrixScore(A [][]int) int {
 	for i := 0; i < len(A); i++ {
 		if A[i][0] == 0 {
-			reverseArr(A[i])
+			reverse861(A[i])
 		}
 	}
 	for i := 0; i < len(A[0]); i++ {
@@ -24,7 +24,7 @@ func matrixScore(A [][]int) int {
 	return res
 }
 
-func reverseArr(arr []int) {
+func reverse861(arr []int) {
 	for i := 0; i < len(arr); i++ {
 		if arr[i] == 1 {
 			arr[i] = 0

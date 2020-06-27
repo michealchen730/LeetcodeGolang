@@ -45,10 +45,3 @@ func sumEvenGrandparentError(root *TreeNode) int {
 	getDepth(root)
 	return ans
 }
-
-func max(i int, j int) int {
-	if i > j {
-		return i
-	}
-	return j
-}
