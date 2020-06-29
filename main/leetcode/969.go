@@ -6,10 +6,10 @@ func pancakeSort(A []int) []int {
 		for i, v := range A {
 			if v == k && i != k-1 {
 				if i != 0 {
-					reverse(A[:i+1])
+					reverseArr(A[:i+1])
 					res = append(res, i+1)
 				}
-				reverse(A[:k])
+				reverseArr(A[:k])
 				res = append(res, k)
 			}
 		}

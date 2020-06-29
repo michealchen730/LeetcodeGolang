@@ -1,6 +1,6 @@
 package main
 
-func subsets(nums []int) [][]int {
+func subsets0804(nums []int) [][]int {
 	var res [][]int
 	var path []int
 	dfs0804(0, &res, &path, nums)

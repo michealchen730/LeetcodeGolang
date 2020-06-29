@@ -15,7 +15,7 @@ func findDiagonalOrder(matrix [][]int) []int {
 			temp = append(temp, matrix[m][n])
 		}
 		if flag%2 != 0 {
-			reverse(temp)
+			reverseArr(temp)
 		}
 		res = append(res, temp...)
 		flag++
