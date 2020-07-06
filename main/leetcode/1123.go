@@ -14,11 +14,3 @@ func lcaDeepestLeaves(root *TreeNode) *TreeNode {
 	}
 	return nil
 }
-
-func getDepth(root *TreeNode) int {
-	if root == nil {
-		return 0
-	} else {
-		return max(getDepth(root.Left), getDepth(root.Right)) + 1
-	}
-}

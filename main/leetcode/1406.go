@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func stoneGameIII(stoneValue []int) string {
 	dp := make([]int, len(stoneValue))
 	sum := stoneValue[len(dp)-1]
@@ -26,8 +24,4 @@ func stoneGameIII(stoneValue []int) string {
 	} else {
 		return "Tie"
 	}
-}
-
-func main() {
-	fmt.Println(stoneGameIII([]int{-1, -2}))
 }

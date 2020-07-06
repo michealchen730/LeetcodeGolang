@@ -66,3 +66,12 @@ func KMP(target string, text string) int {
 	}
 	return -1
 }
+
+//树算法
+func getDepth(root *TreeNode) int {
+	if root == nil {
+		return 0
+	} else {
+		return max(getDepth(root.Left), getDepth(root.Right)) + 1
+	}
+}
