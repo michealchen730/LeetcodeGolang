@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 )
 
@@ -30,8 +29,4 @@ func summaryRanges(nums []int) []string {
 	}
 	res = append(res, strconv.Itoa(nums[len(nums)-1]))
 	return res
-}
-
-func main() {
-	fmt.Println(summaryRanges([]int{0, 2, 3, 4, 6, 8, 9}))
 }
