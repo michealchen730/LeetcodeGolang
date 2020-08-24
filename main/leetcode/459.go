@@ -3,14 +3,15 @@ package main
 import (
 	"strings"
 )
+
 //这题感觉没有太好的思路(后面证明了是我太垃圾了。。。)
 func repeatedSubstringPattern(s string) bool {
-	i:=0
-	for i<len(s)/2{
-		if s[i]==s[len(s)-1] {
-			t1:=s[0:i+1]
-			t2:=s[len(s)-i-1:len(s)]
-			if strings.Compare(t1,t2)==0&&checkStrings(s,t1) {
+	i := 0
+	for i < len(s)/2 {
+		if s[i] == s[len(s)-1] {
+			t1 := s[0 : i+1]
+			t2 := s[len(s)-i-1 : len(s)]
+			if strings.Compare(t1, t2) == 0 && checkStrings(s, t1) {
 				return true
 			}
 		}
@@ -19,18 +20,26 @@ func repeatedSubstringPattern(s string) bool {
 	return false
 }
 
-func checkStrings(s string,t string) bool{
-	if len(s)%len(t)!=0{
+func checkStrings(s string, t string) bool {
+	if len(s)%len(t) != 0 {
 		return false
-	}else{
-		nums:=len(s)/len(t)
-		temp:=""
-		for i:=0;i<nums;i++{
-			temp=temp+t
+	} else {
+		nums := len(s) / len(t)
+		temp := ""
+		for i := 0; i < nums; i++ {
+			temp = temp + t
 		}
-		if strings.Compare(s,temp)==0{
+		if strings.Compare(s, temp) == 0 {
 			return true
 		}
 	}
 	return false
+}
+
+//7个月后的更新
+func repeatedSubstringPattern459(s string) bool {
+	var s2 strings.Builder
+	s2.WriteString(s[1:])
+	s2.WriteString(s[:len(s)-1])
+	return strings.Contains(s2.String(), s)
 }
