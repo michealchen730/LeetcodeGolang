@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 //始终感觉写的太过于复杂了
 func restoreIpAddresses(s string) []string {
 	if len(s) < 4 {
@@ -61,9 +59,4 @@ func dfs93(k, dot int, s string, bytes *[]byte, res *[]string) {
 	}
 
 	*bytes = (*bytes)[:len(*bytes)-1]
-}
-
-func main() {
-	fmt.Println(restoreIpAddresses("010010"))
-
 }
