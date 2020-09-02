@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 //广度优先搜索
 func ladderLength(beginWord string, endWord string, wordList []string) int {
 	l := len(beginWord)
@@ -38,8 +36,4 @@ func ladderLength(beginWord string, endWord string, wordList []string) int {
 		queue = queue[size:]
 	}
 	return 0
-}
-
-func main() {
-	fmt.Println(ladderLength("hit", "cog", []string{"hot", "dot", "dog", "lot", "log", "cog"}))
 }
