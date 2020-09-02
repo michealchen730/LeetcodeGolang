@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func isNumber(s string) bool {
 	mp := map[byte]byte{
 		'0': 'N', '1': 'N', '2': 'N', '3': 'N', '4': 'N', '5': 'N', '6': 'N', '7': 'N', '8': 'N', '9': 'N', 'e': 'E', 'E': 'E', '.': 'P', '+': 'S', '-': 'S', ' ': 'C',
@@ -65,8 +63,4 @@ func isNumber(s string) bool {
 		}
 	}
 	return p == "int" || p == "fraction" || p == "enum" || p == "end" || p == "point"
-}
-
-func main() {
-	fmt.Println(isNumber("1 "))
 }
