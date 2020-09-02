@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 //这是一年前的写法，效率很低
 //下一轮需要改进
 func buildTree106(inorder []int, postorder []int) *TreeNode {
@@ -31,8 +29,4 @@ func constructTree106(in, post []int, ps, pe, is, ie int) *TreeNode {
 		}
 	}
 	return &node
-}
-
-func main() {
-	fmt.Println(buildTree106([]int{9, 3, 15, 20, 7}, []int{9, 15, 7, 20, 3}))
 }
