@@ -20,7 +20,11 @@ func heapSort(arr []int) {
 		adjustHeap(arr, 0, i)
 	}
 }
+
+//最大堆的建立
 func buildMaxHeap(arr []int) {
+	//因为堆是完全二叉树
+	//所以只要对每个非叶子结点全部调整一遍即可
 	for i := len(arr)/2 - 1; i >= 0; i-- {
 		adjustHeap(arr, i, len(arr))
 	}
