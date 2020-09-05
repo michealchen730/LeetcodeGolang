@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func searchMatrix240(matrix [][]int, target int) bool {
 	if len(matrix) == 0 || len(matrix[0]) == 0 {
 		return false
@@ -25,8 +23,4 @@ func searchMatrix240(matrix [][]int, target int) bool {
 		}
 	}
 	return false
-}
-
-func main() {
-	fmt.Println(searchMatrix240([][]int{[]int{5}, []int{6}}, 6))
 }
