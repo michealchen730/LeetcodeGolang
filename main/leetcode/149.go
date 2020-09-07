@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 )
@@ -72,9 +71,4 @@ func maxPoints(points [][]int) int {
 
 	}
 	return res
-}
-
-func main() {
-	//fmt.Println(maxPoints([][]int{[]int{0,0},[]int{1,1},[]int{0,0}}))
-	fmt.Println(Slope(985451152, 954754554))
 }
