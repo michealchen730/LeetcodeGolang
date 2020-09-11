@@ -30,9 +30,7 @@ func getCombinationSum2(i int, candidates []int, used []int, temp int, target in
 			cpy := make([]int, len(*path))
 			copy(cpy, *path)
 			*res = append(*res, cpy)
-			temp2 := *path
-			temp2 = temp2[:len(temp2)-1]
-			*path = temp2
+			*path = (*path)[:len(*path)-1]
 			return
 		}
 		if temp+candidates[i] < target {
@@ -40,9 +38,7 @@ func getCombinationSum2(i int, candidates []int, used []int, temp int, target in
 			used[i] = 1
 			getCombinationSum2(i+1, candidates, used, temp+candidates[i], target, path, res)
 			used[i] = 0
-			temp2 := *path
-			temp2 = temp2[:len(temp2)-1]
-			*path = temp2
+			*path = (*path)[:len(*path)-1]
 		}
 	}
 }

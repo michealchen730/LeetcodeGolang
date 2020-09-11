@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func modifyString(s string) string {
 	b := []byte(s)
 	for i := 0; i < len(s); i++ {
@@ -29,8 +27,4 @@ func modifyString(s string) string {
 		}
 	}
 	return string(b)
-}
-
-func main() {
-	fmt.Println(modifyString("??yw?ipkj?"))
 }
