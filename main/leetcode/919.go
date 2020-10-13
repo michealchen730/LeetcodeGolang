@@ -95,32 +95,32 @@ EI:
 //	return insertCBT(this.Root,v)
 //}
 
-//func insertCBT(root *TreeNode,val int) int {
-//	if root.Left==nil{
-//		root.Left=&TreeNode{Val: val}
-//		return root.Val
-//	}
-//	if root.Right==nil{
-//		root.Right=&TreeNode{Val: val}
-//		return root.Val
-//	}
-//	lh,rh:=0,0
-//	temp:=root.Left
-//	for temp!=nil{
-//		lh++
-//		temp=temp.Right
-//	}
-//	temp=root.Right
-//	for temp!=nil{
-//		rh++
-//		temp=temp.Right
-//	}
-//	if lh==rh{
-//		return insertCBT(root.Left,val)
-//	}else{
-//		return insertCBT(temp,val)
-//	}
-//}
+func insertCBT(root *TreeNode, val int) int {
+	if root.Left == nil {
+		root.Left = &TreeNode{Val: val}
+		return root.Val
+	}
+	if root.Right == nil {
+		root.Right = &TreeNode{Val: val}
+		return root.Val
+	}
+	lh, rh := 0, 0
+	temp := root.Left
+	for temp != nil {
+		lh++
+		temp = temp.Right
+	}
+	temp = root.Right
+	for temp != nil {
+		rh++
+		temp = temp.Right
+	}
+	if lh == rh {
+		return insertCBT(root.Left, val)
+	} else {
+		return insertCBT(root.Right, val)
+	}
+}
 
 func (this *CBTInserter) Get_root() *TreeNode {
 	return this.Root
