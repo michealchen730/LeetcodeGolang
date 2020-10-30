@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func expressiveWords(S string, words []string) int {
 	res := 0
 	for _, v := range words {
@@ -29,7 +27,6 @@ func expressiveWords(S string, words []string) int {
 			}
 		}
 		if i == len(S) && j == len(v) {
-			fmt.Println(v)
 			res++
 		}
 	}
