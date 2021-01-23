@@ -75,3 +75,16 @@ func getDepth(root *TreeNode) int {
 		return max(getDepth(root.Left), getDepth(root.Right)) + 1
 	}
 }
+
+//数学，i的二进制有多少位的长度
+func lenBinary(i int) int {
+	if i == 0 {
+		return 0
+	}
+	res := 0
+	for i != 0 {
+		i >>= 1
+		res++
+	}
+	return res
+}

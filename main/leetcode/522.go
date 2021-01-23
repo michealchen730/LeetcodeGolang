@@ -5,7 +5,7 @@ import (
 )
 
 func findLUSlength522(strs []string) int {
-	sort.Sort(StringS(strs))
+	sort.Sort(StringsByLength(strs))
 	mp := make(map[string]int)
 	var sts []string
 	for i := 0; i < len(strs); i++ {
