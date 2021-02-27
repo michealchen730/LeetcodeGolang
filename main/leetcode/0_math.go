@@ -88,3 +88,22 @@ func lenBinary(i int) int {
 	}
 	return res
 }
+
+//求最大公约数
+func gcd(x, y int) int {
+	tmp := x % y
+	if tmp > 0 {
+		return gcd(y, tmp)
+	} else {
+		return y
+	}
+}
+
+func arrToInt(arr []int) int {
+	res := 0
+	for i := 0; i < len(arr); i++ {
+		res *= 10
+		res += arr[i]
+	}
+	return res
+}

@@ -21,12 +21,3 @@ func simplifiedFractions(n int) []string {
 	}
 	return res
 }
-
-func gcd(x, y int) int {
-	tmp := x % y
-	if tmp > 0 {
-		return gcd(y, tmp)
-	} else {
-		return y
-	}
-}
