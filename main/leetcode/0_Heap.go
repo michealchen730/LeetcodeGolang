@@ -1,5 +1,11 @@
 package main
 
+import (
+	"container/heap"
+	"strconv"
+	"strings"
+)
+
 type MaxHeap struct {
 	heap []int
 	size int
@@ -84,4 +90,56 @@ func (this *MinHeap) adjustMinHeap(i int) {
 			break
 		}
 	}
+}
+
+type S struct {
+	name  string
+	count int
+}
+
+type Strs []S
+
+func (h Strs) Len() int      { return len(h) }
+func (h Strs) Swap(i, j int) { h[i], h[j] = h[j], h[i] }
+func (h Strs) Less(i, j int) bool {
+	if h[i].count < h[j].count {
+		return true
+	} else if h[i].count > h[j].count {
+		return false
+	} else {
+		return strings.Compare(h[i].name, h[j].name) > 0
+	}
+}
+
+func (h *Strs) Push(x interface{}) {
+	*h = append(*h, x.(S))
+}
+func (h *Strs) Pop() interface{} {
+	old := *h
+	n := len(old)
+	x := old[n-1]
+	*h = old[:n-1]
+	return x
+}
+
+func topKstrings(strings []string, k int) [][]string {
+	// write code here
+	mp := make(map[string]int)
+	for _, v := range strings {
+		mp[v]++
+	}
+	h := &Strs{}
+	heap.Init(h)
+	for key, v := range mp {
+		heap.Push(h, S{name: key, count: v})
+		if h.Len() > k {
+			heap.Pop(h)
+		}
+	}
+	res := make([][]string, k)
+	for i := k - 1; i >= 0; i-- {
+		element := heap.Pop(h)
+		res[i] = []string{element.(S).name, strconv.Itoa(element.(S).count)}
+	}
+	return res
 }

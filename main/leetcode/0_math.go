@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func max(i int, j int) int {
 	if i > j {
 		return i
@@ -104,6 +106,46 @@ func arrToInt(arr []int) int {
 	for i := 0; i < len(arr); i++ {
 		res *= 10
 		res += arr[i]
+	}
+	return res
+}
+func int2Bin(a int32) []int32 {
+	var res []int32
+	for b := a; b > 0; b = b / 2 {
+		m := b % 2
+		res = append(res, m)
+	}
+	return res
+}
+
+func forthBit(num int32) int32 {
+	arr := int2Bin(num)
+	fmt.Println(arr)
+	if len(arr) < 4 {
+		return 0
+	} else {
+		return arr[3]
+	}
+}
+
+//最小堆
+func segment(x int32, space []int) []int {
+	if len(space) == 0 {
+		return nil
+	}
+	var Q = make([]int, 0, len(space))
+	res := make([]int, len(space)-int(x)+1)
+	for i := 0; i < len(space); i++ {
+		for len(Q) != 0 && space[i] < space[Q[len(Q)-1]] {
+			Q = Q[:len(Q)-1]
+		}
+		Q = append(Q, i)
+		if Q[0] == i-int(x) {
+			Q = Q[1:]
+		}
+		if i+1-int(x) >= 0 {
+			res[i+1-int(x)] = space[Q[0]]
+		}
 	}
 	return res
 }
