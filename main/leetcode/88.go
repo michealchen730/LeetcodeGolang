@@ -13,4 +13,9 @@ func merge88(nums1 []int, m int, nums2 []int, n int) {
 		}
 		k--
 	}
+	for j >= 0 {
+		nums1[j] = nums2[j]
+		j--
+	}
+
 }
