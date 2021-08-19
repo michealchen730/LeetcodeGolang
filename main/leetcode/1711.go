@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func countPairs(deliciousness []int) int {
 	MOD := 1000000007
 	powers := make([]int, 31)
@@ -27,8 +25,4 @@ func countPairs(deliciousness []int) int {
 		delete(mp, k)
 	}
 	return res
-}
-
-func main() {
-	fmt.Println(countPairs([]int{0, 1}))
 }
