@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 //func unhappyFriends(n int, preferences [][]int, pairs [][]int) int {
 //	pairsMap:=make(map[int]int)
 //	for _,v:=range pairs{
@@ -68,8 +64,4 @@ func unhappyFriends(n int, preferences [][]int, pairs [][]int) int {
 		}
 	}
 	return res
-}
-
-func main() {
-	fmt.Println(unhappyFriends(4, [][]int{{1, 2, 3}, {3, 2, 0}, {3, 1, 0}, {1, 2, 0}}, [][]int{{0, 1}, {2, 3}}))
 }
