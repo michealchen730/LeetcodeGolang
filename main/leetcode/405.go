@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func toHex(num int) string {
 	if num == 0 {
 		return "0"
@@ -49,8 +47,4 @@ func toHex(num int) string {
 		}
 	}
 	return string(res)
-}
-
-func main() {
-	fmt.Println(toHex(-1))
 }
