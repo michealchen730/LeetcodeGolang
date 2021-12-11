@@ -1,68 +1,66 @@
 package main
 
 import (
-	"sort"
 	"strings"
 )
 
+//func originalDigits(s string) string {
+//	arr:=make([]int,10)
+//	for k, _ := range s {
+//		switch s[k] {
+//		case 'z':
+//			arr[0]++
+//		case 'w':
+//			arr[2]++
+//		case 'u':
+//			arr[4]++
+//		case 'x':
+//			arr[6]++
+//		case 'g':
+//			arr[8]++
+//		case 'f':
+//			arr[5]++
+//		case 'v':
+//			arr[7]++
+//		case 'h':
+//			arr[3]++
+//		case 'o':
+//			arr[1]++
+//		case 'i':
+//			arr[9]++
+//		default:
+//		}
+//	}
+//	arr[5]-=arr[4]
+//	arr[7]-=arr[5]
+//	arr[3]-=arr[8]
+//	arr[1]-=arr[0]+arr[2]+arr[4]
+//	arr[9]-=arr[6]+arr[8]+arr[5]
+//	var res strings.Builder
+//	for k, v := range arr {
+//		for i:=0;i<v;i++{
+//			res.WriteByte(byte(48 + k))
+//		}
+//	}
+//	return res.String()
+//}
+
 func originalDigits(s string) string {
-	mp := make(map[byte]int)
+	arr := make([]int, 11)
+	mp := map[byte]int{'z': 0, 'w': 2, 'u': 4, 'x': 6, 'g': 8, 'f': 5, 'v': 7, 'h': 3, 'o': 1, 'i': 9, 'e': 10, 'n': 10, 's': 10, 'r': 10, 't': 10}
 	for k, _ := range s {
-		mp[s[k]]++
+		arr[mp[s[k]]]++
 	}
-	var nums []int
-	for mp['z'] != 0 {
-		nums = append(nums, 0)
-		mp['z']--
-	}
-	for mp['w'] != 0 {
-		nums = append(nums, 2)
-		mp['w']--
-	}
-	for mp['u'] != 0 {
-		nums = append(nums, 4)
-		mp['f']--
-		mp['u']--
-	}
-	for mp['x'] != 0 {
-		nums = append(nums, 6)
-		mp['s']--
-		mp['i']--
-		mp['x']--
-	}
-	for mp['g'] != 0 {
-		nums = append(nums, 8)
-		mp['i']--
-		mp['g']--
-		mp['h']--
-	}
-	for mp['h'] != 0 {
-		nums = append(nums, 3)
-		mp['h']--
-	}
-	for mp['f'] != 0 {
-		nums = append(nums, 5)
-		mp['f']--
-		mp['i']--
-	}
-	for mp['s'] != 0 {
-		nums = append(nums, 7)
-		mp['s']--
-		mp['n']--
-	}
-	for mp['i'] != 0 {
-		nums = append(nums, 9)
-		mp['i']--
-		mp['n'] -= 2
-	}
-	for mp['n'] != 0 {
-		nums = append(nums, 1)
-		mp['n']--
-	}
-	sort.Ints(nums)
+	arr[5] -= arr[4]
+	arr[7] -= arr[5]
+	arr[3] -= arr[8]
+	arr[1] -= arr[0] + arr[2] + arr[4]
+	arr[9] -= arr[6] + arr[8] + arr[5]
 	var res strings.Builder
-	for _, v := range nums {
-		res.WriteByte(byte(48 + v))
+	for k, v := range arr[:10] {
+		for i := 0; i < v; i++ {
+			res.WriteByte(byte(48 + k))
+		}
 	}
 	return res.String()
 }

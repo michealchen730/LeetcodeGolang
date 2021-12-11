@@ -43,20 +43,7 @@ package main
 //	strs := string(bytes2)
 //
 //	fmt.Println(strs)
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 //	defer res2.Body.Close()
 //	fmt.Println("test")
 //}
