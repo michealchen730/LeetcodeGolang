@@ -5,9 +5,9 @@ type WordDictionary struct {
 }
 
 /** Initialize your data structure here. */
-func Constructor() WordDictionary {
-	return WordDictionary{trie: &Trie{}}
-}
+//func Constructor() WordDictionary {
+//	return WordDictionary{trie: &Trie{}}
+//}
 
 /** Adds a word into the data structure. */
 func (this *WordDictionary) AddWord(word string) {
